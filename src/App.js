@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import CameraComponent from './components/CameraComponent';
+import './App.css'; // Import your custom CSS for styling
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="app-container">
+      <header className="header">
+        <h1>Love of ChristGBC | liveatonce</h1>
       </header>
+      <main className="main-content">
+        <div className="video-container">
+          <CameraComponent />
+        </div>
+        <div className="platform-selection">
+          <h2>Select Platforms to Go Live:</h2>
+          <label>
+            <input type="checkbox" name="facebook" />
+            Facebook
+          </label>
+          <label>
+            <input type="checkbox" name="instagram" />
+            Instagram
+          </label>
+          <label>
+            <input type="checkbox" name="tiktok" />
+            TikTok
+          </label>
+        </div>
+        <button className="start-live-button">Start Live</button>
+      </main>
     </div>
   );
 }
